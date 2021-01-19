@@ -16,14 +16,8 @@ CREATE TABLE HomeInfo (
 
 CREATE TABLE HomeImages (
   id          INT unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  Home_ID     INT unsigned NOT NULL AUTO_INCREMENT,
-  ImageURL    VARCHAR(150),
-  INDEX (Home_ID),
-  FOREIGN KEY (Home_ID) REFERENCES HomeInfo(id) ON UPDATE CASCADE ON DELETE RESTRICT
+  Home_ID     INT unsigned NOT NULL,
+  ImageURL    VARCHAR(150)
 );
 
-INSERT INTO HomeInfo (AddressLine1, AddressLine2, AskingPrice, NumBeds, NumBaths, SqFt, Saved)
-  VALUES ('435 Marina Blvd', 'San Francisco, CA 94123', 25000000, 5, 8, 7039, 0);
-
-INSERT INTO HomeImages (Home_ID, ImageURL)
-  VALUES (1, 'testURL');
+ALTER TABLE HomeImages ADD FOREIGN KEY (Home_ID) REFERENCES HomeInfo(id);

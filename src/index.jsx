@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import HeaderLinks from './components/HeaderLinks.jsx';
+// eslint-disable-next-line import/extensions
+import App from './components/App.jsx';
 
 ReactDOM.render(
-  <HeaderLinks />,
+  <App />,
   document.getElementById('PhotoGalleryComponent'),
 );

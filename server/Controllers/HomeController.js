@@ -1,4 +1,4 @@
-const HomeModel = require('../Models/HomeModel.js');
+const HomeModel = require('../models/HomeModel.js');
 
 const getInfo = (req, res) => {
   HomeModel.getInfo((err, success) => {
@@ -10,6 +10,17 @@ const getInfo = (req, res) => {
   });
 };
 
+const getImages = (req, res) => {
+  HomeModel.getImages((err, success) => {
+    if (err) {
+      res.status(400).send(err);
+    } else {
+      res.status(200).send(success);
+    }
+  });
+};
+
 module.exports = {
   getInfo,
+  getImages,
 };

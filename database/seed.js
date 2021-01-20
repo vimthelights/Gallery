@@ -23,14 +23,10 @@ for (let i = 0; i < numHomes; i += 1) {
 const HomeImages = [];
 for (let i = 0; i < numHomes; i += 1) {
   const HomeImage = { Home_ID: i + 1, ImageURL: [] };
-  for (let j = 0; j < 20; j += 1) {
-    // put curl command into batch script and download image to local, then put them on s3
-    // replace line 29 with random link from s3
-    HomeImage.ImageURL[j] = 'https://loremflickr.com/320/240/house';
+  for (let j = 0; j < 50; j += 1) {
+    HomeImage.ImageURL[j] = `https://truliaphotos.s3.us-east-2.amazonaws.com/${j + 1}.webp`;
   }
   HomeImages.push(HomeImage);
-
-  console.log('HomeImages: ', HomeImages);
 }
 
 // Create database connection

@@ -2,15 +2,15 @@
 import React from 'react';
 import {mount, shallow} from 'enzyme';
 
-import HeaderLinks from '../src/components/HeaderLinks.jsx';
+import App from '../src/components/App.jsx';
 
-describe('<HeaderLinks />', () => {
+describe('<App />', () => {
   it('should render a div', () => {
-    const wrapper = mount(<HeaderLinks />);
+    const wrapper = mount(<App />);
     expect(wrapper.find('div')).toExist();
   });
   it('should not render a list', () => {
-    const wrapper = shallow(<HeaderLinks />);
+    const wrapper = shallow(<App />);
     expect(wrapper.find('ul')).not.toExist();
   });
 });

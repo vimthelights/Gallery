@@ -12,7 +12,7 @@
     "build": "webpack",
     "watch": "webpack --watch",
     "seedDB": "node ./database/seed.js",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "devDependencies": {
     "enzyme": "^3.11.0",

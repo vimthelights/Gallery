@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PhotoBox1 from './PhotoBox1.jsx';
+import HomePage from './HomePage.jsx';
 
 const axios = require('axios');
 
@@ -43,7 +43,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <PhotoBox1 images={this.state.photobox1imgs} />
+      <div>
+        {
+          this.state.photobox1imgs.length > 0 &&
+          <HomePage images={this.state.photobox1imgs} />
+        }
+      </div>
     );
   }
 }

@@ -17,6 +17,7 @@ const SSButton = styled.button`
   line-height: 1.5;
   cursor: pointer;
   outline: 0;
+  background-color: white;
 `;
 
 class SaveButton extends React.Component {

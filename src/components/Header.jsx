@@ -4,6 +4,10 @@ import styled from 'styled-components';
 const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
+  width: 100%
+  max-width: 1100px;
+  z-index: 2;
+  margin-top: 68px;
 `;
 
 const LeftArrow = () => (

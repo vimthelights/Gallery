@@ -8,23 +8,17 @@ import HomeInfo from './HomeInfo.jsx';
 
 const axios = require('axios');
 
-const StyledWrapper = styled.div`
-  display: flex;
-  .one {
-    flex: 1
-  }
-  .two {
-    flex: 2
-  }
-`;
-
 const HomePageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;
+  margin: auto;
   z-index: 1;
-  width: 992px;
+  width: 100%;
   height: 100%;
+  max-width: 1000px;
+  font-family: 'Cabin';
 `;
 
 class App extends React.Component {
@@ -77,9 +71,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <StyledWrapper>
-        <div className="one" />
-        <HomePageContainer className="two">
+      <>
+        <img alt="truliaNav" src="https://truliaphotos.s3.us-east-2.amazonaws.com/truliaNav.png" style={{ position: 'fixed', zIndex: 5 }} />
+        <HomePageContainer>
           {
             this.state.showModal ? (
               <Modal onClose={this.handleCloseModal} images={this.state.homeImages}> </Modal>
@@ -95,8 +89,7 @@ class App extends React.Component {
             )
           }
         </HomePageContainer>
-        <div className="one" />
-      </StyledWrapper>
+      </>
     );
   }
 }

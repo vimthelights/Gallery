@@ -6,26 +6,27 @@ import SaveButton from './SaveButton.jsx';
 const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   z-index: 1;
   position: relative;
-  padding: 8px;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
+  transition: all 0.5s ease;
+  &:hover{transform: scale(1.05)};
+  max-height: 500px;
+  max-width: 1100px;
+  overflow: hidden;
 `;
 
 const LargeImageContainer = styled.div`
   display: flex;
+  justify-content: flex-start;
 `;
 
 const LargeImage = styled.img`
-  width: 700px;
-  height: 500px;
+  display: flex;
+  max-width: 750px;
+  max-height: 500px;
   border-radius: 8px 0px 0px 8px;
   margin-right: 10px;
-  transition: all 0.5s ease;
-  &:hover{transform: scale(1.05)};
-  overflow: hidden;
 `;
 
 const VerticalImageContainer = styled.div`
@@ -51,7 +52,7 @@ const ButtonContainer = styled.div`
   position: absolute;
 `;
 
-const SSButton = styled.button`
+const ShareButton = styled.button`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -65,8 +66,7 @@ const SSButton = styled.button`
   font-weight: bold;
   box-sizing: border-box;
   line-height: 1.5;
-  // color: rgb(59, 65, 68);
-  background: #FFFFFF;
+  background-color: white;
   cursor: pointer;
 `;
 
@@ -108,12 +108,12 @@ const PhotoGallery = (props) => (
       <SmallImage src={props.images[2].ImageURL} style={{ marginTop: '10px', borderRadius: '0px 0px 8px 0px' }} />
       <ButtonContainer>
         <SaveButton />
-        <SSButton onClick={() => console.log('Shared!')}>
+        <ShareButton onClick={() => console.log('Shared!')}>
           <svg className="svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px">
             <path d="M17.29 7.2v14.285h-2.66V7.201l-3.99 3.99L8.76 9.31l7.2-7.2 7.2 7.2-1.88 1.88-3.99-3.99zm5.32 9.298h-2.66v-2.66h5.32v15.295H6.65V13.838h5.32v2.66H9.31v9.975h13.3v-9.975z" fill="#007882" />
           </svg>
           &nbsp;&nbsp;Share
-        </SSButton>
+        </ShareButton>
       </ButtonContainer>
     </VerticalImageContainer>
   </ImageWrapper>

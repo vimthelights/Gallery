@@ -22,7 +22,7 @@ const HomePageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  z-index: 100;
+  z-index: 1;
   width: 992px;
   height: 100%;
 `;

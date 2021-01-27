@@ -9,7 +9,7 @@ const ModalOuterWrapper = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  z-index: 200;
+  z-index: 2;
   top: 0;
   bottom: 0;
   left: 0;

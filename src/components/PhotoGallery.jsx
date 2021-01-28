@@ -3,6 +3,14 @@ import styled from 'styled-components';
 
 import SaveButton from './SaveButton.jsx';
 
+const ImageWrapper0 = styled.div`
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+`;
+
 const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -13,7 +21,6 @@ const ImageWrapper = styled.div`
   &:hover{transform: scale(1.05)};
   max-height: 500px;
   max-width: 1100px;
-  overflow: hidden;
 `;
 
 const LargeImageContainer = styled.div`
@@ -45,6 +52,7 @@ const SmallImage = styled.img`
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-items: space-between;
   width: 200px;
   height: 200px;
   margin-left: 35px;
@@ -54,7 +62,6 @@ const ButtonContainer = styled.div`
 
 const ShareButton = styled.button`
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   height: 30px;
@@ -93,30 +100,32 @@ const ForSale = styled.span`
 `;
 
 const PhotoGallery = (props) => (
-  <ImageWrapper>
-    <LargeImageContainer>
-      <LargeImage onClick={props.handleShowModal} src={props.images[0].ImageURL} />
-      <ForSaleContainer>
-        <ForSale>
-          For Sale
-        </ForSale>
-      </ForSaleContainer>
-    </LargeImageContainer>
+  <ImageWrapper0>
+    <ImageWrapper>
+      <LargeImageContainer>
+        <LargeImage onClick={props.handleShowModal} src={props.images[0].ImageURL} />
+        <ForSaleContainer>
+          <ForSale>
+            For Sale
+          </ForSale>
+        </ForSaleContainer>
+      </LargeImageContainer>
 
-    <VerticalImageContainer>
-      <SmallImage src={props.images[1].ImageURL} style={{ borderRadius: '0px 8px 0px 0px' }} />
-      <SmallImage src={props.images[2].ImageURL} style={{ marginTop: '10px', borderRadius: '0px 0px 8px 0px' }} />
-      <ButtonContainer>
-        <SaveButton />
-        <ShareButton onClick={() => console.log('Shared!')}>
-          <svg className="svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px">
-            <path d="M17.29 7.2v14.285h-2.66V7.201l-3.99 3.99L8.76 9.31l7.2-7.2 7.2 7.2-1.88 1.88-3.99-3.99zm5.32 9.298h-2.66v-2.66h5.32v15.295H6.65V13.838h5.32v2.66H9.31v9.975h13.3v-9.975z" fill="#007882" />
-          </svg>
-          &nbsp;&nbsp;Share
-        </ShareButton>
-      </ButtonContainer>
-    </VerticalImageContainer>
-  </ImageWrapper>
+      <VerticalImageContainer>
+        <SmallImage src={props.images[1].ImageURL} style={{ borderRadius: '0px 8px 0px 0px' }} />
+        <SmallImage src={props.images[2].ImageURL} style={{ marginTop: '10px', borderRadius: '0px 0px 8px 0px' }} />
+        <ButtonContainer>
+          <SaveButton />
+          <ShareButton onClick={() => console.log('Shared!')}>
+            <svg className="svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px">
+              <path d="M17.29 7.2v14.285h-2.66V7.201l-3.99 3.99L8.76 9.31l7.2-7.2 7.2 7.2-1.88 1.88-3.99-3.99zm5.32 9.298h-2.66v-2.66h5.32v15.295H6.65V13.838h5.32v2.66H9.31v9.975h13.3v-9.975z" fill="#007882" />
+            </svg>
+            &nbsp;&nbsp;Share
+          </ShareButton>
+        </ButtonContainer>
+      </VerticalImageContainer>
+    </ImageWrapper>
+  </ImageWrapper0>
 );
 
 export default PhotoGallery;

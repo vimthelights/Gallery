@@ -3,11 +3,10 @@ import styled from 'styled-components';
 
 const SSButton = styled.button`
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   height: 30px;
-  margin-right: 30px;
+  margin-right: 25px;
   min-width: 100px;
   border-radius: 8px;
   border: none;

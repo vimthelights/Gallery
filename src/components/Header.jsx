@@ -7,7 +7,7 @@ const HeaderContainer = styled.div`
   width: 100%
   max-width: 1100px;
   z-index: 2;
-  margin-top: 68px;
+  margin-top: 73px;
 `;
 
 const LeftArrow = () => (
@@ -36,6 +36,6 @@ const Header = () => (
     <GreaterThan />
     <span style={{ color: 'rgb(134, 144, 153)', fontSize: '14px' }}>435 Marina Blvd</span>
   </HeaderContainer>
-)
+);
 
 export default Header;

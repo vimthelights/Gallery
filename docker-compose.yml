@@ -13,10 +13,10 @@ services:
       MYSQL_ROOT_PASSWORD: 'platf0rm2020'
     ports:
       # <Port exposed> : < MySQL Port running inside container>
-      - '3306:3306'
+      - '3307:3307'
     expose:
-      # Opens port 3306 on the container
-      - '3306'
+      # Opens port 3307 on the container
+      - '3307'
       # Where our data will be persisted
     volumes:
       - my-db:/var/lib/mysql

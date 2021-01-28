@@ -72,7 +72,6 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <img alt="truliaNav" src="https://truliaphotos.s3.us-east-2.amazonaws.com/truliaNav.png" style={{ position: 'fixed', zIndex: 5 }} />
         <HomePageContainer>
           {
             this.state.showModal ? (

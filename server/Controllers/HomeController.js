@@ -1,4 +1,4 @@
-const HomeModel = require('../models/HomeModel.js');
+const HomeModel = require('../Models/HomeModel.js');
 
 const getInfo = (req, res) => {
   HomeModel.getInfo((err, success) => {

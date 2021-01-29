@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 const port = 3002;
 
-const HomeController = require('./controllers/HomeController.js');
+const HomeController = require('./Controllers/HomeController.js');
 
 app.use('/', express.static(path.join(__dirname, '../public')));
 

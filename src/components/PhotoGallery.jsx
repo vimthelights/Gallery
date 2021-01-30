@@ -39,8 +39,8 @@ const LargeImage = styled.img`
 const VerticalImageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 200px;
-  height: 500px;
+  width: 260px;
+  height: 510px;
 `;
 
 const SmallImage = styled.img`

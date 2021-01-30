@@ -5,18 +5,22 @@ const SSButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30px;
+  height: 40px;
   margin-right: 25px;
   min-width: 100px;
   border-radius: 8px;
   border: none;
   font-size: 16px;
-  font-weight: bold;
+  /* font-weight: bold; */
   box-sizing: border-box;
   line-height: 1.5;
   cursor: pointer;
   outline: 0;
   background-color: white;
+  position: absolute;
+  z-index: 2;
+  left: -5px;
+  top: 4px;
 `;
 
 class SaveButton extends React.Component {

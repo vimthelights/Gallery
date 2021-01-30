@@ -51,8 +51,8 @@ const SmallImage = styled.img`
 
 const ButtonContainer = styled.div`
   display: flex;
-  justify-content: center;
-  right: 0px;
+  justify-content: right;
+  right: 200px;
   align-items: space-between;
   width: 250px;
   height: 200px;
@@ -89,7 +89,7 @@ const ForSaleContainer = styled.div`
   width: 80px;
   height: 20px;
   margin-top: 10px;
-  left: 24px;
+  left: 222px;
   z-index: 2;
 `;
 

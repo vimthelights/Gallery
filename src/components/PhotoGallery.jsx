@@ -20,7 +20,7 @@ const ImageWrapper = styled.div`
   transition: all 0.5s ease;
   &:hover{transform: scale(1.05)};
   max-height: 500px;
-  max-width: 1100px;
+  min-width: 1000px;
 `;
 
 const LargeImageContainer = styled.div`
@@ -30,8 +30,8 @@ const LargeImageContainer = styled.div`
 
 const LargeImage = styled.img`
   display: flex;
-  max-width: 750px;
-  max-height: 500px;
+  width: 750px;
+  height: 500px;
   border-radius: 8px 0px 0px 8px;
   margin-right: 10px;
 `;

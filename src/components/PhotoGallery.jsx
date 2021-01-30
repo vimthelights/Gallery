@@ -124,12 +124,12 @@ const PhotoGallery = (props) => (
     </ButtonContainer>
     <ImageWrapper onClick={props.handleShowModal}>
       <LargeImageContainer>
-        <LargeImage src={props.images[0].ImageURL} />
+        <LargeImage src={props.images[0].ImageURL} onClick={props.handleShowModal}/>
       </LargeImageContainer>
 
       <VerticalImageContainer>
-        <SmallImage src={props.images[1].ImageURL} style={{ borderRadius: '0px 8px 0px 0px' }} />
-        <SmallImage src={props.images[2].ImageURL} style={{ marginTop: '10px', borderRadius: '0px 0px 8px 0px' }} />
+        <SmallImage src={props.images[1].ImageURL} style={{ borderRadius: '0px 8px 0px 0px' }} onClick={props.handleShowModal}/>
+        <SmallImage src={props.images[2].ImageURL} style={{ marginTop: '10px', borderRadius: '0px 0px 8px 0px' }} onClick={props.handleShowModal}/>
       </VerticalImageContainer>
     </ImageWrapper>
   </ImageWrapper0>

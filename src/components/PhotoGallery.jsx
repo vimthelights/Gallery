@@ -122,9 +122,9 @@ const PhotoGallery = (props) => (
         &nbsp;Share
       </ShareButton>
     </ButtonContainer>
-    <ImageWrapper>
+    <ImageWrapper onClick={props.handleShowModal}>
       <LargeImageContainer>
-        <LargeImage onClick={props.handleShowModal} src={props.images[0].ImageURL} />
+        <LargeImage src={props.images[0].ImageURL} />
       </LargeImageContainer>
 
       <VerticalImageContainer>

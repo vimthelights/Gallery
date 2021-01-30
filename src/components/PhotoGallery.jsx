@@ -6,9 +6,10 @@ import SaveButton from './SaveButton.jsx';
 const ImageWrapper0 = styled.div`
   display: flex;
   overflow: hidden;
-  width: 100%;
+  width: 1100px;
   border-radius: 8px;
   margin-top: 10px;
+  margin: auto;
 `;
 
 const ImageWrapper = styled.div`

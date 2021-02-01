@@ -10,8 +10,9 @@ const SaveButtonStyled = styled.button`
   min-width: 100px;
   border-radius: 8px;
   border: none;
+  font-family: 'Cabin';
+  font-weight: 500;
   font-size: 16px;
-  /* font-weight: bold; */
   box-sizing: border-box;
   line-height: 1.5;
   cursor: pointer;
@@ -19,7 +20,7 @@ const SaveButtonStyled = styled.button`
   background-color: white;
   position: absolute;
   z-index: 2;
-  left: -5px;
+  left: 4px;
   top: 4px;
 `;
 

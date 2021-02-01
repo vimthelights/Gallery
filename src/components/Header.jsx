@@ -8,6 +8,7 @@ const HeaderContainer = styled.div`
   max-width: 1100px;
   z-index: 2;
   margin-top: 73px;
+  margin-bottom: 8px;
 `;
 
 const LeftArrow = () => (
@@ -25,8 +26,8 @@ const GreaterThan = () => (
 const Header = () => (
   <HeaderContainer>
     <LeftArrow />
-    <span style={{ color: 'rgb(0, 120, 130)', fontWeight: 'bold', marginLeft: '4px', fontSize: '14px', cursor: 'pointer' }}>Back to Search&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-    <span style={{ color: 'rgb(134, 144, 153)', fontSize: '14px' }}>For Sale</span>
+    <span style={{ color: 'rgb(0, 120, 130)', fontWeight: '700', marginLeft: '4px', fontSize: '14px', cursor: 'pointer' }}><b>Back to Search</b></span>
+    <span style={{ color: 'rgb(134, 144, 153)', fontSize: '14px', marginLeft: '35px' }}>For Sale</span>
     <GreaterThan />
     <span style={{ color: 'rgb(0, 120, 130)', fontSize: '14px', cursor: 'pointer' }}>CA</span>
     <GreaterThan />

@@ -5,7 +5,7 @@ const FooterContainer = styled.div`
   display: flex;
 `;
 
-const HomeInfoContainer = styled.div`
+const AddressContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 15px;
@@ -21,6 +21,13 @@ const EmptyLine = styled.div`
   height: 16px;
   left: 50%;
   top: 0;
+`;
+
+const PriceContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  margin-left: 45px;
 `;
 
 const BedImage = () => (
@@ -41,9 +48,35 @@ const SqFtImage = () => (
   </svg>
 );
 
+const GetPreQualifiedButton = styled.button`
+  margin: 0px 0px 16px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  transition: top 0.1s ease 0s, box-shadow 0.1s ease 0s, border-color 0.1s ease 0s, background-color 0.1s ease 0s, color 0.1s ease 0s;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 120, 130);
+  border-color: transparent;
+  width: 85%;
+  padding: 8px 16px;
+  box-shadow: none;
+  &:hover{
+    color: rgb(0, 120, 130);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(0, 120, 130);
+  };
+`;
+
 const HomeInfo = () => (
   <FooterContainer>
-    <HomeInfoContainer>
+    <AddressContainer>
       <div>
         <span style={{ fontSize: '28px', fontWeight: 'bold', color: 'rgb(59, 65, 68)' }}>435 Marina Blvd</span>
       </div>
@@ -57,11 +90,23 @@ const HomeInfo = () => (
         <BedImage />
         <span style={{ fontSize: '16px', lineHeight: 1.5, letterSpacing: '-0.1px', color: 'rgb(59, 65, 68)', marginRight: '6px', marginLeft: '2px' }}> 5 beds </span>
         <BathImage />
-        <span style={{ fontSize: '16px', lineHeight: 1.5, letterSpacing: '-0.1px', color: 'rgb(59, 65, 68)', marginRight: '6px', marginLeft: '2px' }}> 8 baths </span>
+        <span style={{ fontSize: '16px', lineHeight: 1.5, letterSpacing: '-0.1px', color: 'rgb(59, 65, 68)', marginRight: '6px', marginLeft: '2px' }}> 7 baths </span>
         <SqFtImage />
         <span style={{ fontSize: '16px', lineHeight: 1.5, letterSpacing: '-0.1px', color: 'rgb(59, 65, 68)', marginLeft: '2px' }}> 7,039 sqft </span>
       </BdBaContainer>
-    </HomeInfoContainer>
+    </AddressContainer>
+
+    <PriceContainer>
+      <div style={{ fontSize: '28px', fontWeight: 'bold', lineHeight: 1.14, color: '#3B4144', marginRight: '6px', marginLeft: '2px' }}>
+        $25,000,000
+      </div>
+      <div style={{ marginTop: '5px', marginBottom: '5px', fontSize: '16px', lineHeight: 1.5, color: '#3B4144' }}>
+        Est. Mortgage $95,364/mo*
+      </div>
+      <GetPreQualifiedButton>
+        Get Pre-Qualified
+      </GetPreQualifiedButton>
+    </PriceContainer>
   </FooterContainer>
 );
 

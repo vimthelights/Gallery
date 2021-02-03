@@ -100,7 +100,7 @@ const CloseButtonWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-left: auto;
-  right: 8px;
+  right: 20px;
   z-index: 6;
 `;
 

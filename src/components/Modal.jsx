@@ -71,6 +71,7 @@ const HeaderWrapper = styled.div`
   align-items: center;
   width: 100%;
   background-color: white;
+  margin-bottom: 8px;
 `;
 
 const HeaderButtons = styled.button`
@@ -171,7 +172,7 @@ class Modal extends React.Component {
                 </button>
               </CloseButtonWrapper>
             </HeaderWrapper>
-            <div style={{ width: '100%', backgroundColor: 'white' }}>
+            <div style={{ width: '100%', backgroundColor: 'white', marginBottom: '8px' }}>
               <hr style={{ backgroundColor: 'white' }} />
             </div>
             <div style={{ display: 'flex', backgroundColor: 'white', alignItems: 'center', fontFamily: 'Cabin', fontWeight: '500', fontSize: '14px', lineHeight: 1.43 }}>&nbsp;&nbsp;435 Marina Blvd &nbsp;|&nbsp; $25,000,000 &nbsp;|&nbsp; 5 Beds 7 Baths</div>

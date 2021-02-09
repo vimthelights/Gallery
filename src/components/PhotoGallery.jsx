@@ -133,11 +133,11 @@ const PhotoGallery = (props) => (
 
     {/* Display 3 homepage images*/}
     <ImageWrapper onClick={props.handleShowModal}>
-      <LargeImage src={props.images[0].ImageURL} />
+      <LargeImage src={props.images[0].imageurl} />
 
       <VerticalImageContainer>
-        <SmallImage src={props.images[1].ImageURL} style={{ borderRadius: '0px 8px 0px 0px' }} />
-        <SmallImage src={props.images[2].ImageURL} style={{ marginTop: '10px', borderRadius: '0px 0px 8px 0px' }} />
+        <SmallImage src={props.images[1].imageurl} style={{ borderRadius: '0px 8px 0px 0px' }} />
+        <SmallImage src={props.images[2].imageurl} style={{ marginTop: '10px', borderRadius: '0px 0px 8px 0px' }} />
       </VerticalImageContainer>
     </ImageWrapper>
   </ImageWrapper0>

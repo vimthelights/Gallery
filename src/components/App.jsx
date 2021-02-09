@@ -28,6 +28,7 @@ class App extends React.Component {
       homeInfo: {},
       homeImages: [],
       showModal: false,
+      photobox1imgs:[]
     };
 
     this.handleShowModal = this.handleShowModal.bind(this);
@@ -47,22 +48,24 @@ class App extends React.Component {
   }
 
   getHomeData() { // refactor to one query using join
-    const randHomeID = Math.floor(Math.random() * 100);
+    const randHomeID = Math.floor((Math.random() * 1000000) + 1);
 
-    axios.get('/api/homeinfo', { params: { ID: randHomeID } })
+    axios.get(`/api/home/${randHomeID}`)
       .then((response) => {
-        this.setState({ homeInfo: response.data });
+        this.setState({ homeInfo: response.data.rows });
+        console.log(response.data.rows);
       })
       .catch((error) => {
         console.log(error);
       });
-
-    axios.get('/api/homeimages', { params: { ID: randHomeID } })
+    //lets see
+    axios.get(`/api/home/${randHomeID}/images`)
       .then((response) => {
         this.setState({
-          homeImages: response.data,
-          photobox1imgs: [response.data[0], response.data[1], response.data[2]],
+          homeImages: response.data.rows,
+          photobox1imgs: [response.data.rows[0], response.data.rows[1], response.data.rows[2]],
         });
+        console.log(response.data.rows);
       })
       .catch((error) => {
         console.log(error);

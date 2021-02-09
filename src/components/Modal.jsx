@@ -107,7 +107,7 @@ const CloseButtonWrapper = styled.div`
 const ImageRow = ({ num, imageElement }) => (
   <ImageRowWrapper>
     {
-      imageElement.map((image) => <Image num={num} src={image.ImageURL} />)
+      imageElement.map((image) => <Image num={num} src={image.imageurl} />)
     }
   </ImageRowWrapper>
 );

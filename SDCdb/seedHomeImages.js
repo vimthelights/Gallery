@@ -2,7 +2,7 @@ const faker = require('faker');
 const fs = require('fs');
 
 //for homes images
-const writeHomeImages = fs.createWriteStream('./tmp/seedHomeImages.csv');
+const writeHomeImages = fs.createWriteStream('seedHomeImages.csv');
 writeHomeImages.write('home_Id, imageUrl, displayOrder\n', 'utf8');
 
 

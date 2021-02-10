@@ -2,3 +2,5 @@ SDCdb
 server
 src
 SDCTest
+newrelic.js
+tmp

@@ -5,7 +5,6 @@ const HomeModel = require('../Models/HomeModel.js');
 module.exports = {
   getHome: (req, res) => {
     const {homeId} = req.params;
-    console.log(homeId)
     HomeModel.getHome(homeId, (err, success) => {
       if (err) {
         res.status(400).send(err);

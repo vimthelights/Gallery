@@ -3,7 +3,7 @@ const fs = require('fs');
 //const {insertHomes, makeHomes} = require('./seedHomes.js');
 
 //for homes table
-const writeHomes = fs.createWriteStream('./tmp/seedHomes.csv');
+const writeHomes = fs.createWriteStream('seedHomes.csv');
 writeHomes.write('address, askingPrice, numBeds, numBaths, sqFt\n', 'utf8');
 
 
